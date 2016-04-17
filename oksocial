@@ -4,21 +4,11 @@ set -e
 
 CMD=$(basename $0)
 
-codesha() {
-  find pom.xml src -type f | sort | xargs shasum | shasum | cut -f 1 -d ' '
-}
+bazel build //src/main/java/com/baulsupp/oksocial:oksocial-main >/dev/null 2>/dev/null || echo "Build failed" >&2
 
-SHA=$(codesha)
-
-if [ ! -f "target/cached-$SHA.jar" ]; then
-  mvn -DskipTests clean package dependency:copy-dependencies
-  mv target/oksocial-*SNAPSHOT.jar "target/cached-$SHA.jar"
-fi
 
 JAVA_CMD=java
 BCP=
-#DEBUG=-agentlib:jdwp=transport=dt_socket,server=y,address=localhost:5005,suspend=y
-#DEBUG="-Djavax.net.debug=ssl:handshake -Djava.security.debug=sunpkcs11"
 
 if [ -x /usr/libexec/java_home ]; then
   JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
@@ -30,5 +20,4 @@ if [ -x /usr/libexec/java_home ]; then
   fi
 fi
 
-MAIN_JAR=$(ls "target/cached-$SHA.jar")
-$JAVA_CMD $DEBUG $BCP -classpath $MAIN_JAR:target/dependency/\* -Dcommand.name=$CMD com.baulsupp.oksocial.Main "$@"
+bazel-bin/src/main/java/com/baulsupp/oksocial/oksocial-main "--jvm_flags=$BCP" --jvm_flag=-Dcommand.name=$CMD "$@"

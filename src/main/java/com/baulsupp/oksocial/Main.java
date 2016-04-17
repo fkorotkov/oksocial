@@ -377,8 +377,7 @@ public class Main extends HelpOption implements Runnable {
       }
 
       builder.sslSocketFactory(
-          createSslSocketFactory(keyManagers, new TrustManager[] {trustManager}),
-          trustManager);
+          createSslSocketFactory(keyManagers, new TrustManager[] {trustManager}));
     }
 
     if (cacheDirectory != null) {

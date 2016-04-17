@@ -1,7 +1,5 @@
-package okhttp.twitter;
+package com.baulsupp.oksocial.twitter;
 
-import com.baulsupp.oksocial.twitter.TwitterAuthInterceptor;
-import com.baulsupp.oksocial.twitter.TwitterCredentials;
 import java.io.IOException;
 import java.security.InvalidKeyException;
 import java.security.NoSuchAlgorithmException;

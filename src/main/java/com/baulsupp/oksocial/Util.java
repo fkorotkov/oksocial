@@ -16,6 +16,11 @@ public final class Util {
     try {
       Properties prop = new Properties();
       InputStream in = Main.class.getResourceAsStream(propertiesFile);
+
+      if (in == null) {
+        return "dev";
+      }
+
       prop.load(in);
       in.close();
       return prop.getProperty("version");

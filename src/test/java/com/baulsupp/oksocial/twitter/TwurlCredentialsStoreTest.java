@@ -1,10 +1,10 @@
-package okhttp.twitter;
+package com.baulsupp.oksocial.twitter;
 
 import java.io.File;
 
-import com.baulsupp.oksocial.twitter.TwitterCredentials;
-import com.baulsupp.oksocial.twitter.TwurlCredentialsStore;
 import java.io.IOException;
+import java.net.URL;
+import java.net.URLClassLoader;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;

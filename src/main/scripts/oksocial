@@ -10,7 +10,7 @@ if [ -x /usr/libexec/java_home ]; then
 
   if [ $? -eq 0 ]; then
     JAVA_CMD="$JAVA_HOME/bin/java"
-    ALPN=$(ls $INSTALLDIR/alpn/alpn-boot-*.jar)
+    ALPN=$(ls $INSTALLDIR/alpn/*alpn*.jar)
     BCP="-Xbootclasspath/p:$ALPN"
   fi
 fi
