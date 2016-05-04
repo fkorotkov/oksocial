@@ -1,4 +1,4 @@
-package okhttp.twitter;
+package com.baulsupp.oksocial.twitter;
 
 import java.io.File;
 

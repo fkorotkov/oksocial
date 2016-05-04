@@ -192,7 +192,7 @@ public class Main extends HelpOption implements Runnable {
     }
 
     if (showCredentials) {
-      for (AuthInterceptor a : serviceInterceptor.services()) {
+      for (AuthInterceptor<?> a : serviceInterceptor.services()) {
         printKnownCredentials(a);
       }
 

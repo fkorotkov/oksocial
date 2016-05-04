@@ -33,7 +33,7 @@ public class FacebookAuthInterceptor implements AuthInterceptor<FacebookCredenti
   }
 
   @Override
-  public CredentialsStore credentialsStore() {
+  public CredentialsStore<FacebookCredentials> credentialsStore() {
     return credentialsStore;
   }
 

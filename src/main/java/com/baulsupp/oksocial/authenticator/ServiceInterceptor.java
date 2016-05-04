@@ -20,7 +20,7 @@ public class ServiceInterceptor implements Interceptor {
 
   @Override
   public Response intercept(Chain chain) throws IOException {
-    for (AuthInterceptor interceptor : services) {
+    for (AuthInterceptor<?> interceptor : services) {
       if (interceptor.supportsUrl(chain.request().url())) {
         return interceptor.intercept(chain);
       }

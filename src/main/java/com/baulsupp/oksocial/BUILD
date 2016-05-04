@@ -1,0 +1,23 @@
+java_library(
+  name='oksocial',
+  dependencies = [
+  	'3rdparty/jvm:airline',
+  	'3rdparty/jvm:okio',
+  	'3rdparty/jvm:okhttp',
+  	'3rdparty/jvm:okhttp-logging-interceptor',
+  	'3rdparty/jvm:okhttp-okcurl',
+  	'3rdparty/jvm:jackson-databind',
+  	'3rdparty/jvm:jackson-dataformat-yaml',
+  	'3rdparty/jvm:joauth',
+  	'3rdparty/jvm:google-oauth-client-jetty',
+  	'3rdparty/jvm:jetty',
+  	'3rdparty/jvm:ok2curl',
+  	'3rdparty/jvm:commons-cli',
+  	'3rdparty/jvm:commons-io',
+  	'3rdparty/jvm:commons-lang',
+  	'3rdparty/jvm:slf4j-api',
+  	'3rdparty/jvm:slf4j-jcl',
+  ],
+  sources=rglobs('*.java'),
+  resources=['src/main/resources'],
+)

@@ -93,3 +93,8 @@ buildNumber.properties
 
 ### Bazel ###
 /bazel-*
+
+.cache
+.pants.*
+.pids
+dist

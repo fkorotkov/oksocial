@@ -207,7 +207,7 @@
         <artifactId>maven-assembly-plugin</artifactId>
         <version>2.6</version>
         <configuration>
-          <descriptor>src/assembly/bundle.xml</descriptor>
+          <descriptor>src/main/assembly/bundle.xml</descriptor>
           <finalName>oksocial-${project.version}</finalName>
           <archive>
             <manifest>
