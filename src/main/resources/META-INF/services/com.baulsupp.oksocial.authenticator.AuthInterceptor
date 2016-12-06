@@ -8,6 +8,7 @@ com.baulsupp.oksocial.services.imgur.ImgurAuthInterceptor
 com.baulsupp.oksocial.services.lyft.LyftAuthInterceptor
 com.baulsupp.oksocial.services.mapbox.MapboxAuthInterceptor
 com.baulsupp.oksocial.services.microsoft.MicrosoftAuthInterceptor
+com.baulsupp.oksocial.services.plaid.PlaidAuthInterceptor
 com.baulsupp.oksocial.services.slack.SlackAuthInterceptor
 com.baulsupp.oksocial.services.squareup.SquareUpAuthInterceptor
 com.baulsupp.oksocial.services.stackexchange.StackExchangeAuthInterceptor
