@@ -1,0 +1,4 @@
+https://api.betfair.com/exchange/betting/rest/v1/listMarketCatalogue/
+https://api.betfair.com/exchange/betting/rest/v1/placeOrders/
+https://api.betfair.com/exchange/betting/rest/v1/listMarketBook/
+https://api.betfair.com/exchange/betting/rest/v1.0/listEventTypes/
